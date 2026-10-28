@@ -14,16 +14,16 @@ A React app that displays the Aurora CS Developer Track course catalog, tracks w
 
 ## Prerequisites
 
-- [Node.js](https://nodejs.org/) (v18 or newer) and npm
+- [Node.js](https://nodejs.org/) Node.js v20.19+ (or v22.12+) and npm
 
 ## How to Run
 
 1. **Clone the repo and install dependencies**
 
    ```bash
-   git clone https://github.com/Jaedog117/CSC-3700
-   cd course-scheduler
-   npm install
+git clone https://github.com/Jaedog117/CSC-3700
+cd CSC-3700
+npm install
    ```
 
 2. **Create the `.env` file** in the project root (it is not committed to git).

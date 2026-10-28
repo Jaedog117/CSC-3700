@@ -10,8 +10,7 @@ const AboutPage = () => {
     });
 
     return (
-        <div className="card p-4 shadow-sm my-3 max-w-2xl mx-auto">
-            <h2 className="fw-bold mb-3">About</h2>
+        <div className="card p-4 shadow-sm my-3 mx-auto" style={{ maxWidth: '42rem' }}>            <h2 className="fw-bold mb-3">About</h2>
             <p className="text-secondary mb-4">
                 The Aurora CS Course Scheduler shows the CS Developer Track catalog,
                 tracks which courses you have completed, and shows which courses you are

@@ -17,24 +17,32 @@ const HomePage = () => {
       }))
       : null;
   // Shared completed status state (persisted via localStorage)
-  const [completed, setCompleted] = useState(() => {
+const [completed, setCompleted] = useState(() => {
+  try {
     const saved = localStorage.getItem('completed_courses');
-    return saved ? JSON.parse(saved).map(Number) : [];
-  });
+    const parsed = saved ? JSON.parse(saved) : [];
+    return Array.isArray(parsed) ? parsed.map(Number) : [];
+  } catch {
+    return [];
+  }
+});
 
-  const [filter, setFilter] = useState('All');
-
-  const handleSave = () => {
+const handleSave = () => {
+  try {
     localStorage.setItem('completed_courses', JSON.stringify(completed));
-    alert("Progress saved successfully!");
-  };
+    alert('Progress saved successfully!');
+  } catch {
+    alert('Could not save progress. Check your browser storage settings.');
+  }
+};
 
   return (
       <div className="container mt-4">
         {/* 2. Show an error message if the fetch fails */}
         {error && (
             <div className="alert alert-danger my-3" role="alert">
-              <strong>Error loading catalog:</strong> {error}. Please ensure your JSON Server is running on port 3333.
+                <strong>Error loading catalog:</strong> {error}. Please make sure JSON Server is
+                running and that VITE_API_BASE_URL in your .env file is correct.
             </div>
         )}
 

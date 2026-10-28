@@ -28,7 +28,7 @@ const CourseCard = ({ course, status, coursesCatalog, onStatusToggle }) => {
           {/* Header Row */}
           <div className="d-flex justify-content-between align-items-center mb-2">
             <h5 className="card-title mb-0 fw-bold">{course.number}</h5>
-            <span className={`badge px-2.5 py-1.5 fw-bold ${badgeColor}`}>{status}</span>
+            <span className={`badge fw-bold ${badgeColor}`}>{status}</span>
           </div>
 
           {/* Description Block */}
