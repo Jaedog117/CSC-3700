@@ -20,7 +20,7 @@ const AboutPage = () => {
 
             <div className="row g-2 border-top pt-3">
                 <div className="col-4 text-dark fw-bold">Author(s):</div>
-                <div className="col-8 text-secondary">Partner One & Partner Two</div>
+                <div className="col-8 text-secondary">Johnny Christiansen & Jaedon Vaughn</div>
 
                 <div className="col-4 text-dark fw-bold">Date:</div>
                 <div className="col-8 text-secondary">{formattedDate}</div>
