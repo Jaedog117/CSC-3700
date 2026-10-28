@@ -14,16 +14,16 @@ A React app that displays the Aurora CS Developer Track course catalog, tracks w
 
 ## Prerequisites
 
-- [Node.js](https://nodejs.org/) Node.js v20.19+ (or v22.12+) and npm
+- [Node.js](https://nodejs.org/) v20.19+ (or v22.12+) and npm
 
 ## How to Run
 
 1. **Clone the repo and install dependencies**
 
    ```bash
-git clone https://github.com/Jaedog117/CSC-3700
-cd CSC-3700
-npm install
+   git clone https://github.com/Jaedog117/CSC-3700
+   cd CSC-3700
+   npm install
    ```
 
 2. **Create the `.env` file** in the project root (it is not committed to git).
@@ -49,6 +49,7 @@ npm install
    npx json-server --watch db/db.json --port 3333
    ```
 
+   The first time, npx may ask to install `json-server`. Type `y` to continue.
    Check it works: http://localhost:3333/courses should show all 10 courses.
 
 4. **Start the React app** (in a second terminal)
@@ -78,5 +79,6 @@ db/db.json              JSON Server data
 src/components/         CourseCard, CourseList, NavBar, ProgressSummary
 src/hooks/useFetch.js   Data fetching hook
 src/pages/              HomePage, AboutPage
+.env.example            Template for the .env file
 .env                    API base URL (not committed)
 ```
